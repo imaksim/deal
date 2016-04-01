@@ -85,15 +85,15 @@
                <!--end Header-->
 <div class="main">
   
-   <input type="button"  class="add_order btn btn-success" value="Добавить заказ">
+    <div><input type="button"  class="add_order btn btn-success" value="Добавить заказ"></div><div style="display: none ;" class="add-order"> <input type="button"  class="btn btn-warning close_order" value="Скрыть"></div>
     
-      <div style="display: none ;" id="add-order" class="row">
+      <div style="display: none ;"  class="add-order row">
        
   <div class="col-lg-2 col-xs-12">
   <input type="text" class="form-control" placeholder="Номер заказа">
   <input type="text"  class="form-control" placeholder="Заказчик">
   <input type="text"  class="form-control" placeholder="Телефон заказчика">
-  <input type="button"  class="btn btn-warning close_order" value="Скрыть">
+  
   </div>
          
   
@@ -129,31 +129,59 @@
         
         
   <div class="col-lg-1 col-xs-8">
-       <label><input type="checkbox">Оплачен</label><br><label><input type="checkbox">По факту</label><label><input type="checkbox">Ожидаем $</label>
-        </div>  
-<div class="col-lg-1 col-xs-8">
+     
+     
+     
+     <table class="table-table table-striped table-bordered">
+	<thead class="table-thead">
+	<tr class="table-tr">
+		<th class="table-th">ОПЛАТА ЗАКАЗА</th>
+		
+		
+	</tr>
+	</thead>
+	<tbody >
+	<tr >
+        <td ><label><input type="checkbox">Оплачен</label></td>
+	</tr>
+     <tr >
+        <td ><label><input type="checkbox">По факту</label></td>
+	</tr>
+     <tr >
+        <td ><label><input type="checkbox">Ожидаем $</label></td>
+	</tr>
+      </tbody>
+</table>
+      
+      
+      
+
        
-        </div> 
-  
+       
+    </div>  
+
   <div class="col-lg-1 col-xs-8">
-       <input  type="text" class="form-control" placeholder="Сумма">
+       <input  type="text" class="form-control" placeholder="Оплата">
         </div> 
-    <div class="col-lg-1 col-xs-8">
-       <input  type="text" class="form-control" placeholder="Сумма">
-        </div> 
-  <script>
+   
+ 
+    
+     <!--Прячет форму add order -->
+       <script>
       $('.add_order').click(function(){
-  $('#add-order').show('slow');
+  $('.add-order').show('slow');
   });
 $('.close_order').click(function(){
-  $('#add-order').hide('slow');
+  $('.add-order').hide('slow');
   });
 </script>
     
-    
+    <!-- END -ADD ORDER -->
     
 </div>
-     <div class="">
+    <div style="background:grey; height:5px;" class="container-fluid">
+    </div>
+     <div style="margin-top:10px;" class="container-fluid">
      <table class="table-table table-striped table-bordered">
 	<thead class="table-thead">
 	<tr class="table-tr">
