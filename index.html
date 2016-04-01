@@ -84,42 +84,71 @@
                
                <!--end Header-->
 <div class="main">
-  
-    <div class="row">
+  <input type="button"  class="close_order" value="Скрыть">
+   <input type="button"  class="add_order" value="Добавить заказ">
+    
+      <div style="display: none ;" id="add-order" class="row">
        
-  
+  <div class="col-lg-2 col-xs-12">
+  <input type="text" class="form-control" placeholder="Номер заказа">
+  <input type="text"  class="form-control" placeholder="Заказчик">
+  <input type="text"  class="form-control" placeholder="Телефон заказчика">
+  </div>
+         
   
    <div class="col-lg-2 col-md-2 col-xs-8 ">
-  <input type="text" class="form-control" placeholder="Номер заказа">
+  
    <div class="form-group">
   <div class="input-group date" id="datetimepicker2">
-    <input readonly="true" type="text" class="form-control" />
+    <input  type="text" class="form-control" placeholder="Дата доставки">
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-calendar"></span>
     </span>
   </div>
 </div>
- 
+ <textarea type="text"  class="form-control" placeholder="Кому доставляем"></textarea>
 </div>
          
        
 
-         
           <div class="col-lg-2 col-xs-12">
+  
   <textarea type="text"  class="form-control" placeholder="Что доставляем"></textarea>
-  </div>
+  <textarea type="text"  class="form-control" placeholder="Примечание"></textarea>
+          </div>
     
-     <div class="  col-lg-2 col-xs-12">
-  <textarea type="text"  class="form-control" placeholder="Кому доставляем"></textarea>
-       </div> 
+   
+        <div class="col-lg-1 col-xs-8">
+                    
+                    <input  type="text" class="form-control" placeholder="Ст-ть доставки">
+                    <input  type="text" class="form-control" placeholder="Стоимость">
+                    <input  type="text" class="form-control" placeholder="Сумма заказа">
+
+        </div>
         
-        <div class="col-lg-2 col-xs-6">
-         <input  type="text" class="form-control" placeholder="Стоимость">
-            <label><input type="checkbox">Оплачен<input type="checkbox">По факту</label>
         
+  <div class="col-lg-1 col-xs-8">
+       <label><input type="checkbox">Оплачен</label><br><label><input type="checkbox">По факту</label><label><input type="checkbox">Ожидаем $</label>
+        </div>  
+<div class="col-lg-1 col-xs-8">
+       
+        </div> 
   
-</div>
-  
+  <div class="col-lg-1 col-xs-8">
+       <input  type="text" class="form-control" placeholder="Сумма">
+        </div> 
+    <div class="col-lg-1 col-xs-8">
+       <input  type="text" class="form-control" placeholder="Сумма">
+        </div> 
+  <script>
+      $('.add_order').click(function(){
+  $('#add-order').show('slow');
+  });
+$('.close_order').click(function(){
+  $('#add-order').hide('slow');
+  });
+</script>
+    
     
     
 </div>
@@ -145,8 +174,8 @@
 	</thead>
 	<tbody class="table-tbody">
 	<tr class="table-tr">
-		<td class="table-td">lorem</td>
-		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolor soluta doloremque facere, consectetur expedita delectus dicta, nobis dolorem. Dolore deserunt perferendis porro vero, nesciunt in voluptate veritatis blanditiis corporis!</td>
+        <td class="table-td"><b>10021</b></td>
+		<td class="table-td">01.04.2016 12:23</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est suscipit aperiam unde et repellat iure a voluptatum dolorum, numquam ducimus aut facere quasi accusantium veniam officia accusamus ullam in modi!</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora culpa optio, fugit distinctio voluptatum, nam repellendus reprehenderit quaerat cupiditate nulla molestiae beatae enim. Odit ut quaerat iure voluptatum incidunt!</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta quia, aut, assumenda, laborum autem beatae ipsam natus vitae id nam unde asperiores sequi, ullam! Maxime beatae perferendis, doloremque minima!</td>
@@ -156,11 +185,11 @@
 		<td class="table-td">Доставлено</td>
 		<td class="table-td">6000</td>
 		<td class="table-td">5000</td>
-		<td class="table-td">Уведоление</td>
+		<td class="table-td"><button type="button" class="btn btn-default">Принять</button><br><button type="button" class="btn btn-warning">Отменить</button><button type="button" class="btn btn-success">Доставлено</button><br></td>
 	</tr>
 	<tr class="table-tr">
-		<td class="table-td">lorem</td>
-		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolor soluta doloremque facere, consectetur expedita delectus dicta, nobis dolorem. Dolore deserunt perferendis porro vero, nesciunt in voluptate veritatis blanditiis corporis!</td>
+		<td class="table-td">10202</td>
+		<td class="table-td">01.04.2016 12:23</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est suscipit aperiam unde et repellat iure a voluptatum dolorum, numquam ducimus aut facere quasi accusantium veniam officia accusamus ullam in modi!</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempora culpa optio, fugit distinctio voluptatum, nam repellendus reprehenderit quaerat cupiditate nulla molestiae beatae enim. Odit ut quaerat iure voluptatum incidunt!</td>
 		<td class="table-td">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta quia, aut, assumenda, laborum autem beatae ipsam natus vitae id nam unde asperiores sequi, ullam! Maxime beatae perferendis, doloremque minima!</td>
